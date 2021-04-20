@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="TossThemApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Singers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller ="MovePeopleController">
+
+    <main>
+       <h1>Select People</h1>
+       <h3>Move from left to right</h3>
+        <div class="click-these-area">
+            <h4 class="green-top">Click These</h4>
+            <div ng-repeat="leader in Leaders">
+                <div class="highlight" ng-click="addThisOne(leader);">
+                    <img src="{{leader.img}}">{{leader.name}}
+                    <hr>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <div class="it-goes-here-area">
+            <h4 class="red-top">It Goes Here {{collection.length}}</h4>
+            <div ng-repeat="collect in collection">
+                <img src="{{collect.img}}">{{collect.name}}
+                <hr>
+            </div>
+        </div>
+    </main>
+   
+
+</body>
+</html>

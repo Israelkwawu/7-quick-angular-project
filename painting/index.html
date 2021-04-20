@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="Painting">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller="PaintingController">
+    <h1>Gallery</h1>
+    <main >
+
+        <div>
+            <button class="btn btn-danger" ng-click='previous();' >previous</button>
+        </div>
+        <div>
+            <img ng-src="img/{{paintings[paintingCount]}}" >
+        </div>
+        <div>
+            <button class="btn btn-success"  ng-click='next();' >next</button>
+        </div>
+    </main>
+    
+ 
+
+</body>
+</html>

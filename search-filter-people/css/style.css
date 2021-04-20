@@ -1,0 +1,44 @@
+img{
+  width:80px;
+  border: 3px solid gray;
+  animation: allImages 5s;
+  opacity: 0.4;
+  
+}
+
+img:hover{
+  animation: selectedImage 3s infinite;
+  opacity: 1.0;
+}
+
+input{
+  height: 70px;
+  width: 300px;
+  font-size: 40px;
+  padding: 0 20px;
+  color: orange;
+}
+
+span{
+  padding: 0 6px;
+  font-size: 30px;
+  color: blue;
+}
+
+.bottom-line{
+  position: absolute;
+  bottom: 0;
+  font-size:25px ;
+  padding: 5px 10px; 
+}
+
+@keyframe allImages{
+  0% {opacity: 1.0;}
+  100% { opacity: 0.4;}
+}
+
+@keyframe selectedImage{
+  0% { background-color: yellow;}
+  50%{ background-color: orange; }
+  100%{ background-color: yellow;}
+}

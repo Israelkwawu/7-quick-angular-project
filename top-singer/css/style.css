@@ -1,0 +1,94 @@
+ .top-area{
+    border: 10px solid purple;
+    text-align: center;
+    padding:5px 0 ;
+}
+
+.top-size{
+   font-size: 40px; 
+}
+
+button{
+    width: 70px;
+    height: 60px;
+}
+/*
+.singer-table{
+    width: 100% ;
+}
+
+.singer-table td{
+    padding: 5px 10px;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.singer-pic{
+    width: 70px;
+    border: 3px solid gray;
+}
+
+.name-size{
+    width: 300px;
+    font-size: 35px;
+}
+
+.name-size:hover{
+    font-size: 25px;
+    color: white;
+    background-color: gray;
+}
+
+.quality-icon{
+    width: 60px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.quality-icon:hover{
+    width: 50px;
+   
+} */
+
+main{
+    width: 70%;
+    margin: 40px auto;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table  tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table  tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table  tr:hover {
+    font-weight: bold;
+    color: #009879;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="TossThemApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Add People</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller ="MovePeopleController">
+    <input type="text" placeholder="Search" ng-model="search">
+    <span>{{(Leaders | filter:search).length}} of {{Leaders.length}}</span>
+    <hr>
+
+    <div>
+        <span  ng-repeat="leader in Leaders | filter:search" >
+            <img src="{{leader.img}}" alt="">
+        </span>
+    </div>
+    <hr>
+
+    <div class="bottom-line" ng-if="(Leaders | filter:search).length < 4 ">
+        <span ng-repeat="leader in Leaders | filter:search | limitTo:1">
+            <span>Looking for:</span>
+            <img src="{{leader.img}}" alt="">
+            <span>{{leader.name}}</span>
+        </span>
+    </div>
+</body>
+</html>

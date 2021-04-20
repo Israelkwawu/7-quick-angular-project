@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller="ListController">
+
+    <main>
+
+        <h2>My Shopping List</h2>
+        <input type="text" placeholder="Enter item here..." ng-model="newItem">
+        <button class="btn btn-success" ng-click="addItem(newItem)">Add</button>
+
+        <h3>So far {{list.length}} items </h3>
+
+        <table id="t1">
+            
+            <tr>
+                <td>#</td>
+                <td>Item</td>
+                <td>Delete</td>
+            
+            </tr>
+            <tr ng-repeat="item in list">
+                <td>{{$index + 1}}</td> 
+                <td>{{item}}</td> 
+                <td><button class="btn btn-danger" ng-click="remove(item)">X</button></td>
+                
+            </tr>
+        </table>
+        <table id="t2">
+            
+            <tr>
+                
+                <td>Deleted</td>
+             
+            </tr>
+            <tr ng-repeat="item in delList">
+                <td ng-click="addDeletedItem(item)">{{item}}</td> 
+              
+            </tr>
+        </table>
+        
+        <hr>
+       
+    </main>
+    
+ 
+</body>
+</html>

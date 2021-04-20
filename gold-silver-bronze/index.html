@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="RankingLeadersApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Leaders</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller ="RankController">
+    <h1>Example #2</h1>
+    <h1>with Angular Mikey</h1>
+    <hr>
+   
+
+    <!-- top area -->
+    <div class="top-area gold" ng-click="toggleGold()">
+        <h4>Gold tier</h4><br>
+        <button class="btn-lg btn-danger" ng-show="showGold">X</button>
+        <button class="btn-lg btn-success" ng-hide="showGold">Show</button>
+    </div>
+
+    <div class="top-area silver" ng-click="toggleSilver()">
+        <h4>Silver tier</h4><br>
+        <button class="btn-lg btn-danger" ng-show="showSilver">X</button>
+        <button class="btn-lg btn-success" ng-hide="showSilver">Show</button>
+    </div>
+
+    <div class="top-area bronze" ng-click="toggleBronze()">
+        <h4>Bronze tier</h4><br>
+        <button class="btn-lg btn-danger" ng-show="showBronze">X</button>
+        <button class="btn-lg btn-success" ng-hide="showBronze">Show</button>
+    </div>
+
+
+    <!-- bottom area -->
+    <div class="bottom-area gold" ng-show="showGold">Gold
+        <span ng-repeat="leader in Leaders" ng-show="leader.rank == 1">
+            <img src="{{leader.img}}">
+        </span>
+    </div>
+    <div class="bottom-area silver" ng-show="showSilver">Silver
+        <span ng-repeat="leader in Leaders" ng-show="leader.rank == 2">
+            <img src="{{leader.img}}">
+        </span>
+    </div>
+    <div class="bottom-area bronze" ng-show="showBronze">Bronze
+        <span ng-repeat="leader in Leaders" ng-show="leader.rank == 3">
+            <img src="{{leader.img}}">
+        </span>
+    </div>
+
+</body>
+</html>

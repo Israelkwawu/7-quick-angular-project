@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="Composer">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/angular.min.js" defer></script>
+    <script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body ng-controller="ComposerController"> 
+    <main>
+        <table class="styled-table">
+            <tr>
+                <td  ng-click="select = 'Bach'" ><img ng-click="select = 'Bach'" src="img/avatar.png" alt="">Bach</td>
+                <td ng-click="select = 'Beethoven'" ><img ng-click="select = 'Beethoven'" src="img/avatar1.png" alt="">Beethoven</td>
+                <td ng-click="select = 'Mozart'" ><img ng-click="select = 'Mozart'" src="img/avatar2.png" alt="">Mozart</td>
+            </tr>
+        </table>
+    
+        <table class="styled-table">
+            <tr>
+                <th colspan="3">Top 5 Pieces of Music</th>
+            </tr>
+            <tr ng-repeat="p in pieces" ng-if="p.composer == select" >
+                <td><img src="img/{{p.img}}" alt=""></td>
+                <td>{{p.composer}}</td>
+                <td>{{p.title}}</td>
+            </tr>
+        </table>
+    </main>
+
+</body>
+</html>
